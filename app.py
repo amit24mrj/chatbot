@@ -4,6 +4,8 @@ import streamlit as st
 import os 
 import textwrap
 import google.generativeai as genai
+with open("index.html","r") as file:
+    html_content=file.read()
 # from IPython.display import display, Markdown
 
 # Load environment variables (e.g., API keys) from a .env
@@ -21,8 +23,6 @@ def get_gemini_response(question):
         return f"An error occurred: {e}"
 
 # Initialize the streamlit app with a custom page title
-with open("index.html","r") as file:
-    html_content=file.read()
 st.set_page_config(page_title="Question & Answer bot")
 # Display the header for the applicatio
 st.header("MY ChatBot App")
