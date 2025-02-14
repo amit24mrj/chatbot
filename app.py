@@ -21,6 +21,8 @@ def get_gemini_response(question):
         return f"An error occurred: {e}"
 
 # Initialize the streamlit app with a custom page title
+with open("index.html","r") as file:
+    html_content=file.read()
 st.set_page_config(page_title="Question & Answer bot")
 # Display the header for the applicatio
 st.header("MY ChatBot App")
