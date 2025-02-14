@@ -4,8 +4,6 @@ import streamlit as st
 import os 
 import textwrap
 import google.generativeai as genai
-with open("index.html","r") as file:
-    html_content=file.read()
 # from IPython.display import display, Markdown
 
 # Load environment variables (e.g., API keys) from a .env
